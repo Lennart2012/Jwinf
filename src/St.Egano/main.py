@@ -9,7 +9,7 @@ print('All work is copyrighted by GNU GENERAL PUBLIC LICENSE. View the License.e
 
 root = Tk()
 root.withdraw()
-logo_path = "img/icon.png"
+logo_path = "icon.png"
 logo = PhotoImage(file=logo_path)
 running = True
 answer = []
@@ -37,9 +37,12 @@ if __name__ == "__main__":
     image_reader = ImageReader(image_path)
     loaded_image = image_reader.load_image()
     image_width, image_height = image_reader.get_image_dimensions()
+    print(f"Working with image at {image_path}")
 
     x = 0
     y = 0
+
+    print("Started. Please wait...")
     while running:
         r, g, b = image_reader.get_pixel_values(x, y)
 
@@ -53,7 +56,5 @@ if __name__ == "__main__":
         y = (y + b) % image_height
     for letter in answer:
         printableanswer += letter
-    if answer == "":
-        print("Looks like there is no code hidden...")
-    print(f"Work done! Answer: {printableanswer}")
-    exit()
+    print(f"\033[92mWork done! Answer: {printableanswer}")
+input("\033[0mPress a key to continue...")
