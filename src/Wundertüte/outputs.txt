@@ -1,3 +1,4 @@
-Luckybag 1: [0;Dice Game] [3;Dice Game]
-Luckybag 2: [1;Dice Game]
-Luckybag 3: [2;Dice Game]
+Luckybag 1: [0;Dice Game] [4;Dice Game]
+Luckybag 2: [1;Dice Game] [5;missed]
+Luckybag 3: [2;Dice Game] [6;missed]
+Luckybag 4: [3;Dice Game] [7;missed]
