@@ -90,6 +90,31 @@ class textcontrol():
             print(f"Die Zeile {line} existiert nicht in der Datei.")
             return None
 
+    @staticmethod
+    def replace_data(id, new_text):
+        file_path = 'outputs.txt'
+
+        # Lese alle Zeilen aus der Datei
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+
+        # Durchsuche alle Zeilen nach dem Text in eckigen Klammern
+        for line_num, line in enumerate(lines, start=1):
+            pattern = re.compile(rf'\[{id};.*?\]')
+            match = re.search(pattern, line)
+
+            # Wenn eine Übereinstimmung gefunden wurde, ersetze den Text
+            if match:
+                lines[line_num - 1] = re.sub(pattern,
+                                             f"[{id};{new_text}]", line)
+                with open(file_path, 'w') as file:
+                    file.writelines(lines)
+                print(
+                    f"Text in eckigen Klammern mit ID {id} durch '{new_text}' ersetzt.")
+                return
+
+        print(f"Kein Text mit ID {id} gefunden.")
+
 
 if __name__ == '__main__':
     textcontrol.create_framework(11)
