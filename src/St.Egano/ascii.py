@@ -1,8 +1,8 @@
 def ascii_convert(number):
-
-    number = int(number)
-    if 0 <= number <= 127:
-        letter = chr(number)
-        return letter
-    else:
-        return "?"
+    try:
+        # Konvertiere die Zahl in ein einzelnes Zeichen
+        text = chr(number)
+        return text
+    except ValueError as e:
+        # Behandle den Fall, wenn die Zahl nicht gültig ist
+        return f"Fehler: {e}"
