@@ -2,7 +2,7 @@
 from userinputs import UserInput
 from textcontrol import TextControl
 from result import Result
-print("All work is copyrighted by GNU GENERAL PUBLIC LICENSE. View the License.exe (main directory) for more information.")
+print("All work is copyrighted by GNU GENERAL PUBLIC LICENSE. View the License (in main directory) for more information.")
 # Definition of variables
 inputs = UserInput.ask_all()
 dice_games_left = inputs[1]
@@ -12,7 +12,7 @@ line = 0
 id = 0
 missed = []
 
-print("\033[93mPlease wait...")
+print("\033[93mStarted. Please wait...")
 print("Press CTRL+C to cancel\033[0m")
 # Create the framework
 TextControl.create_framework(inputs[0])
@@ -58,5 +58,5 @@ for missed in missed:
     TextControl.remove_data(missed)
 
 # Zeige Ergebniss
-print("\033[92mYour result is here! View outputs.txt\033[0m")
+print("\033[92mYour result is here! View output.txt\033[0m")
 Result.showresult()

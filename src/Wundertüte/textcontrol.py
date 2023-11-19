@@ -2,12 +2,11 @@
 import re
 
 
-class TextControl:
-
+class TextControl():
     @staticmethod
     def create_framework(lucky_bags):
-        with open('outputs.txt', 'a') as file:
-            f = open('outputs.txt', 'r+')
+        with open('output.txt', 'a') as file:
+            f = open('output.txt', 'r+')
             f.truncate(0)
             for i in range(0, lucky_bags):
                 zeile = f'Luckybag {i+1}:\n'
@@ -15,7 +14,8 @@ class TextControl:
 
     @staticmethod
     def add_data(line, text, id=None):
-        file_path = 'outputs.txt'
+        file_path = "output.txt"
+
         if id is None:
             raise ValueError('Invalid ID')
         # Lese alle Zeilen aus der Datei
@@ -32,7 +32,7 @@ class TextControl:
 
     @staticmethod
     def remove_data(id):
-        file_path = 'outputs.txt'
+        file_path = "output.txt"
         if id is None:
             raise ValueError
 
@@ -48,8 +48,7 @@ class TextControl:
 
     @staticmethod
     def get_line_data(line):
-        file_path = 'outputs.txt'
-
+        file_path = "output.txt"
         # Lese alle Zeilen aus der Datei
         with open(file_path, 'r') as file:
             lines = file.readlines()
@@ -66,8 +65,7 @@ class TextControl:
 
     @staticmethod
     def get_id_for_data_in_line(line, data):
-        file_path = 'outputs.txt'
-
+        file_path = "output.txt"
         # Lese alle Zeilen aus der Datei
         with open(file_path, 'r') as file:
             lines = file.readlines()
@@ -88,8 +86,7 @@ class TextControl:
 
     @staticmethod
     def replace_data(id, new_text):
-        file_path = 'outputs.txt'
-
+        file_path = "output.txt"
         # Lese alle Zeilen aus der Datei
         with open(file_path, 'r') as file:
             lines = file.readlines()
