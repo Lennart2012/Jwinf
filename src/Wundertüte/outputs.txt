@@ -1,10 +1,10 @@
-Luckybag 1: [0;Dice Game] [10;Dice Game]
-Luckybag 2: [1;Dice Game] [11;Dice Game]
-Luckybag 3: [2;Dice Game] [12;Dice Game]
-Luckybag 4: [3;Dice Game] [13;Dice Game]
-Luckybag 5: [4;Dice Game] [14;Dice Game]
-Luckybag 6: [5;Dice Game] [15;Card Game]
-Luckybag 7: [6;Dice Game] [16;Card Game]
-Luckybag 8: [7;Dice Game] [17;Skill Game]
-Luckybag 9: [8;Dice Game] [18;Skill Game]
-Luckybag 10: [9;Dice Game] [19;Skill Game]
+Luckybag 1: [0;Dice Game]
+Luckybag 2: [1;Card Game]
+Luckybag 3: [2;Skill Game]
+Luckybag 4: 
+Luckybag 5: 
+Luckybag 6: 
+Luckybag 7: 
+Luckybag 8: 
+Luckybag 9: 
+Luckybag 10: 

@@ -3,8 +3,6 @@ import sys
 from tkinter import Tk, PhotoImage
 from tkinter.filedialog import askopenfilename
 from PIL import Image
-from imagereader import ImageReader
-from ascii import ascii_convert
 print('All work is copyrighted by GNU GENERAL PUBLIC LICENSE. View the License.exe for more information.')
 
 root = Tk()

@@ -1,7 +1,8 @@
+# in textcontrol.py
 import re
 
 
-class textcontrol():
+class TextControl:
 
     @staticmethod
     def create_framework(lucky_bags):
@@ -15,7 +16,7 @@ class textcontrol():
     @staticmethod
     def add_data(line, text, id=None):
         file_path = 'outputs.txt'
-        if id == None:
+        if id is None:
             raise ValueError('Invalid ID')
         # Lese alle Zeilen aus der Datei
         with open(file_path, 'r') as file:
@@ -45,8 +46,6 @@ class textcontrol():
         with open(file_path, 'w') as file:
             file.writelines(lines)
 
-        print(f"Text in eckigen Klammern für ID {id} gelöscht.")
-
     @staticmethod
     def get_line_data(line):
         file_path = 'outputs.txt'
@@ -63,7 +62,6 @@ class textcontrol():
             # Gib das gefundene Daten-Array zurück
             return data_in_brackets
         else:
-            print(f"Die Zeile {line} existiert nicht in der Datei.")
             return None
 
     @staticmethod
@@ -84,10 +82,8 @@ class textcontrol():
             if match:
                 return int(match.group(1))
             else:
-                print(f"Der Text {data} wurde nicht in Zeile {line} gefunden.")
                 return None
         else:
-            print(f"Die Zeile {line} existiert nicht in der Datei.")
             return None
 
     @staticmethod
@@ -109,16 +105,4 @@ class textcontrol():
                                              f"[{id};{new_text}]", line)
                 with open(file_path, 'w') as file:
                     file.writelines(lines)
-                print(
-                    f"Text in eckigen Klammern mit ID {id} durch '{new_text}' ersetzt.")
                 return
-
-        print(f"Kein Text mit ID {id} gefunden.")
-
-
-if __name__ == '__main__':
-    textcontrol.create_framework(11)
-    textcontrol.add_data(7, "Test", 1)
-    textcontrol.add_data(7, "Test", 2)
-    input()
-    textcontrol.remove_data(1)
