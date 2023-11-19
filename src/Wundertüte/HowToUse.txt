@@ -1,0 +1,1 @@
+1.Öffnen Sie die main.py und geben sie die Anzahl an.

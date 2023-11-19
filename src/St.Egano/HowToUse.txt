@@ -1,0 +1,2 @@
+1.Öffnen Sie die main.py und wählen sie ihre Datei aus.
+2.Ziehen sie die verschlüsselte Datei auf main.py
